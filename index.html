@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duruvan G Logistics Pvt Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Duruvan G Logistics Pvt Ltd</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#mission">Mission & Vision</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>“One Stop Solution for Transport, Trade & Logistics”</h1>
+    <p>Trusted logistics, transport & trade partner since 2020.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        <strong>Founded: 2020</strong><br><br>
+        Duruvan G Logistics Pvt Ltd is a multi-service business providing employee transport, commercial vehicle services,
+        scrap management, import/export solutions, warehouse support and full logistics management.
+        Our skilled team and reliable fleet serve both domestic and international clients.
+    </p>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Core Services</h2>
+
+    <div class="service-category">
+        <h3>Employee Transport Services</h3>
+        <ul>
+            <li>GPS-enabled vehicles</li>
+            <li>Daily pick-up & drop</li>
+            <li>Shift & route planning</li>
+            <li>Female employee safety features</li>
+            <li>OTA & OTD monitoring</li>
+            <li>Corporate transport contracts</li>
+        </ul>
+    </div>
+
+    <div class="service-category">
+        <h3>Commercial Vehicle Services</h3>
+        <ul>
+            <li>Light & heavy-duty trucks</li>
+            <li>Short-term / long-term rental</li>
+            <li>Reliable GPS-enabled fleet</li>
+            <li>Fleet & route coordination</li>
+        </ul>
+    </div>
+
+    <div class="service-category">
+        <h3>Scrap Management</h3>
+        <ul>
+            <li>Metal scrap: Iron, steel, aluminium, copper, cable</li>
+            <li>Aluminium ingots</li>
+            <li>Wooden pallets & cotton boxes</li>
+            <li>Industrial machinery & equipment scrap</li>
+            <li>E-waste & vehicle dismantling</li>
+            <li>Certified recycling process</li>
+        </ul>
+    </div>
+
+    <div class="service-category">
+        <h3>Import & Export Services</h3>
+        <ul>
+            <li>Global sourcing & procurement</li>
+            <li>Customs clearance & documentation</li>
+            <li>Import/export consulting</li>
+            <li>Cargo handling & shipping</li>
+        </ul>
+    </div>
+
+    <div class="service-category">
+        <h3>Warehouse & End-to-End Logistics</h3>
+        <ul>
+            <li>Short & long-term storage</li>
+            <li>Inventory management</li>
+            <li>Goods handling & dispatch</li>
+            <li>3PL & 4PL logistics solutions</li>
+            <li>End-to-end supply chain coordination</li>
+        </ul>
+    </div>
+</section>
+
+<section id="why" class="why">
+    <h2>Why Choose Us</h2>
+    <ul>
+        <li>✔ Complete Transport & Trade Services</li>
+        <li>✔ Reliable Fleet & Skilled Drivers</li>
+        <li>✔ Certified Scrap Handling</li>
+        <li>✔ Customs-Compliant Import/Export</li>
+        <li>✔ Scalable Warehouse Solutions</li>
+        <li>✔ 24/7 Operational Support</li>
+    </ul>
+</section>
+
+<section id="mission" class="mission">
+    <h2>Our Mission & Vision</h2>
+
+    <h3>Mission</h3>
+    <p>
+        To deliver seamless, efficient and sustainable logistics, transport & trade services
+        across India and globally.
+    </p>
+
+    <h3>Vision</h3>
+    <p>
+        To become India’s leading integrated service provider supporting business growth worldwide.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <p><strong>Duruvan G Logistics Pvt Ltd</strong></p>
+    <p>No: 50 Chakarapani Street, Gandhi Nagar,<br>Keelkattalai, Chennai – 600 117.</p>
+
+    <p><strong>Phone:</strong> 99402 85702 / 72001 76203<br>
+       <strong>Email:</strong> duruvanglogistics@gmail.com</p>
+
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+
+<footer>
+    © 2025 Duruvan G Logistics Pvt Ltd — All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function(){
+      emailjs.init("EryuXCmjxNxD1DEq-"); // Replace with your EmailJS Public Key
+  })();
+
+  // Handle form submission
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent page reload
+
+      emailjs.sendForm('service_c7rfy7k', 'template_413side', this)
+        .then(function() {
+            alert("Message sent successfully!");
+            form.reset();
+        }, function(error) {
+            alert("Failed to send message. Please try again.");
+            console.error(error);
+        });
+  });
+</script>
+

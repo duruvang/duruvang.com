@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f7f9fc;
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background: #0a2a52;
+    padding: 18px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, rgba(8,30,66,0.85), rgba(10,45,90,0.85)),
+                url('https://images.unsplash.com/photo-1581091215367-59ab6b8181d2') center/cover;
+    color: white;
+    text-align: center;
+    padding: 130px 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.hero h1 {
+    font-size: 2.7rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 14px 28px;
+    background: #f4c542;
+    color: #0a2a52;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffdd71;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* CONTENT BOXES */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about, .mission {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    animation: slideUp 1s ease-out;
+}
+
+.service-category {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* WHY US */
+.why ul li {
+    background: #fff;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    list-style: none;
+}
+
+/* CONTACT FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #0a2a52;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* FOOTER */
+footer {
+    background: #0a2a52;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+/* ANIMATIONS */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Button ripple effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(12);
+        opacity: 0;
+    }
+}
